@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Todolist from "./pages/Todolist";
+import Array from "./pages/Array";
 
 function App() {
+  const [page, setPage] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setPage(0)}>Todolist</button>
+      <button onClick={() => setPage(1)}>Array</button>
+      <div className="contents">
+        {page === 0 && <Todolist setPage={setPage} />}
+        {page === 1 && <Array setPage={setPage} />}
+      </div>
     </div>
   );
 }
