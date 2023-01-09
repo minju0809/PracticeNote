@@ -10,3 +10,7 @@
 .right {
   width: 100%;
 }
+
+.movie {
+  display: flex;
+}
