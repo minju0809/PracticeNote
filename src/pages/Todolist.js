@@ -6,7 +6,6 @@ const Todolist = () => {
 
   const handleTodo = (e) => {
     setTodo(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleAdd = () => {
