@@ -14,3 +14,7 @@
 .movie {
   display: flex;
 }
+
+.findMovie {
+  cursor: pointer;
+}
